@@ -4,15 +4,15 @@ Iam publishing my technical work here on full stack  development using HTML, CSS
 Below are the instructions to use my folder. The structure will help you for referring and review the code.
 
 ------------------------------------------------------------------------------------------------------------------
-   TIETOEVRY
+  ## TIETOEVRY
      ----
-         DLithe_DotnetFSD_JanFeb2022
+        ## DLithe_DotnetFSD_JanFeb2022
               ----
-                  lakshmideviDamam
+                  ##lakshmideviDamam
                       ----
-                           Front-End
+                           ##Front-End
                                ----
-                                   HTML
+                                  # HTML
                                       ----
                                             ---->Task 1
                                             ---->Task 2
@@ -21,7 +21,7 @@ Below are the instructions to use my folder. The structure will help you for ref
                                                   ---
                                                   ---
                                             ----->Task N
-                                   CSS
+                                   # CSS
                                    ----
                                          ---->Task 1
                                          ---->Task 2
@@ -31,7 +31,7 @@ Below are the instructions to use my folder. The structure will help you for ref
                                                ---
                                          ---->Task N
                                          
-                                   Bootstrap
+                                   # Bootstrap
                                    ----------
                                           ---->Task 1
                                           ---->Task 2
@@ -41,7 +41,7 @@ Below are the instructions to use my folder. The structure will help you for ref
                                                  ---
                                           ---->Task N
                                           
-                            Back-End
+                            ## Back-End
                             ------------
                             
                             
