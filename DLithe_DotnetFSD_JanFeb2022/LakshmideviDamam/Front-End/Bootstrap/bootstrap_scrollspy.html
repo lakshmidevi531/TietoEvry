@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCROLLSPY</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+</head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-inverse navbar-fixed-top"> <!--Try with <ul class="nav nav-pills nav-stacked">-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+              <a class="navbar-brand" href="#">BOOTCAMP</a>
+            </div>
+        <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li><a href="#Popover">Popover</a></li>
+                  <li><a href="#progressbar">Progress-Bar</a></li>
+                  <li><a href="#tabs">Tabs</a></li>
+                  <li><a href="#Pills">Pills</a></li>
+                  <li><a href="#alert">Alert</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>    
+        <!---popover-->
+        <div id="popover" class="container-fluid">
+            <div class="container">  
+                <h2>Popover</h2>  
+                <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>  
+              </div>  
+                
+              <script>  
+              $(document).ready(function(){  
+                  $('[data-toggle="popover"]').popover();     
+              });  
+              </script>  
+              
+              <hr>
+              <br>
+              <div class="container">  
+                  <h2>Popover Types</h2>  
+                  <ul class="list-inline">  
+                    <li><a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Top</a></li>  
+                    <li><a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Bottom</a></li>  
+                    <li><a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Left</a></li>  
+                    <li><a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Right</a></li>  
+                  </ul>  
+                </div>  
+                  
+                <script>  
+                $(document).ready(function(){  
+                    $('[data-toggle="popover"]').popover();     
+                });  
+                </script>
+                <hr>
+                <br>
+                <div class="container">  
+                  <h3>Popover Dismissable</h3>  
+                    <a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>  
+                </div>  
+                  
+                <script>  
+                $(document).ready(function(){  
+                    $('[data-toggle="popover"]').popover();     
+                });  
+                </script>  
+        </div>
+        <!--Progress bar-->
+        <div id="progressbar" class="container-fluid">
+            <h1>Bootstrap Progress Bar</h1>
+       
+    <div class="container">
+        
+The progress bar shows how far a user is in a process. In Bootstrap, there are several types of progress bars.
+
+The class .progress within a div element is used to create a default progress bar in bootstrap.
+
+Accessible Rich Internet Applications (ARIA) defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities.
+    </div> 
+  
+<div class="container">  
+  <h2>Default Progress Bar</h2>  
+  <div class="progress">  
+    <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width:70%">  
+      <span class="sr-only">78% Complete</span>  
+    </div>  
+  </div>  
+</div>  
+<hr>
+<div class="container">  
+    <h2>Progress Bar With Label</h2>  
+    <div class="progress">  
+      <div class="progress-bar" role="progressbar"   
+      aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:76%">  
+        70%  
+      </div>  
+    </div>  
+</div> 
+<br>
+<div class="container">  
+    <h2>Colored Progress Bars</h2>  
+    <p>The contextual classes colors the progress bars:</p>   
+    <div class="progress">  
+      <div class="progress-bar progress-bar-success"   
+      role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">  
+        50% Complete (success)  
+      </div>  
+</div>
+<br>
+<div class="container">  
+    <h2>Striped Progress Bars</h2>  
+    <p>The .progress-bar-striped class adds stripes to the progress bars:</p>   
+    <div class="progress">  
+      <div class="progress-bar progress-bar-warning progress-bar-striped"   
+      role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">  
+        60% Complete (warning)  
+      </div>  
+    </div>    
+    <br>
+    <div class="container">  
+        <h2>Animated Progress Bar</h2>  
+        <p>The .active class animates the progress bar:</p>   
+        <div class="progress">  
+          <div class="progress-bar progress-bar-striped active"   
+          role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:70%">  
+            80%  
+          </div>  
+        </div>  
+    </div>
+    <hr> 
+    <div class="container">  
+        <h2>Stacked Progress Bars</h2>  
+        <p>Create a stacked progress bar by placing multiple bars into the same div with class .progress:</p>   
+        <div class="progress">  
+          <div class="progress-bar progress-bar-secondary"   
+          role="progressbar" style="width:40%">  
+            Used Space  
+        </div> 
+        <div class="progress-bar progress-bar-success" role="progressbar" style="width: 50%;">Available Space</div>  
+        </div>
+        <hr>
+        <!---Tabs-->
+        <div id="tabs" class="container-fluid" >
+            <div class="container">  
+                <h3>Tabs</h3>  
+                <ul class="nav nav-tabs">  
+                  <li class="active"><a href="#">Home</a></li>  
+                  <li><a href="#">HTML</a></li>  
+                  <li><a href="#">BOOTSTRAP</a></li>  
+                  <li><a href="#">CSS</a></li>  
+                </ul>  
+                <br>  
+            </div>  
+              <hr>
+              
+              <div class="container">  
+                <h3>Tabs With Dropdown Menu</h3>  
+                <ul class="nav nav-tabs">  
+                  <li class="active"><a href="#">Home</a></li>  
+                  <li class="dropdown">  
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">FRONTEND<span class="caret"></span></a>  
+                    <ul class="dropdown-menu">  
+                      <li><a href="#">HTML</a></li>  
+                      <li><a href="#">CSS</a></li>  
+                      <li><a href="#">JS</a></li>  
+                      <li><a href="#">JQUERY</a></li>  
+                      <li><a href="#">BOOTSTRAP</a></li>   
+                                            
+                    </ul>  
+                  </li>  
+                </ul>  
+              </div>  
+              <hr>
+              <div class="container">  
+                <h2>Dynamic Tabs</h2>  
+                <ul class="nav nav-tabs">  
+                  <li class="active"><a data-toggle="tab" href="#home">HTML</a></li>  
+                  <li><a data-toggle="tab" href="#menu1">CSS</a></li>    
+                </ul>  
+                
+                <div class="tab-content">  
+                  <div id="home" class="tab-pane fade in active">  
+                    <h3>HTML</h3>  
+                    <p>A markup language is a programming language that is used make text more   
+                         interactive and dynamic. It can turn a text into images, tables, links etc.</p>  
+                  </div>  
+                  <div id="menu1" class="tab-pane fade">  
+                    <h3>CSS</h3>  
+                    <p> CSS stands for Cascading Style Sheet. It is used to style our html pages for how to display the particular elements.</p>  
+                  </div>  
+        </div>
+        <hr>
+        <div id="Pills" class="container-fluid">
+            <div class="container">  
+                <h1>Pills</h1>  
+                <ul class="nav nav-pills">  
+                  <li class="active"><a href="#">Home</a></li>  
+                  <li><a href="#">HTML</a></li>  
+                  <li><a href="#">CSS</a></li>  
+                  <li><a href="#">BOOTSTRAP</a></li>  
+                </ul>  
+              </div>  
+              <hr>
+              <div class="container">  
+                <h3>Vertical Pills</h3>  
+                <ul class="nav nav-pills nav-stacked">  
+                  <li class="active"><a href="#">Home</a></li>  
+                  <li><a href="#">HTML</a></li>  
+                  <li><a href="#">CSS</a></li>  
+                  <li><a href="#">JS</a></li>  
+                </ul>  
+              </div>  
+              <hr>
+              <div class="container">  
+                <h3>Pills With Dropdown Menu</h3>  
+                <ul class="nav nav-pills nav-stacked">  
+                  <li class="active"><a href="#">Home</a></li>  
+                  <li class="dropdown">  
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">FRONT-END <span class="caret"></span></a>  
+                    <ul class="dropdown-menu">  
+                      <li><a href="#">HTML</a></li>  
+                      <li><a href="#">CSS</a></li>  
+                      <li><a href="#">BOOTSTRAP</a></li>                          
+                    </ul>  
+                  </li>   
+                </ul>  
+              </div>  
+              <hr>
+            <div class="container">  
+                <h2>Dynamic Pills</h2>  
+                <ul class="nav nav-pills">  
+                  <li class="active"><a data-toggle="pill" href="#home1">HTML</a></li>    
+                  <li><a data-toggle="pill" href="#menu2">SQL</a></li>    
+                </ul>  
+                <div class="tab-content">  
+                    <div id="home1" class="tab-pane fade in active">  
+                      <h3>HTML</h3>  
+                      <p>A markup language is a programming language that is used make text more interactive and   
+                        dynamic. It can turn a text into images, tables, links etc.</p>  
+                    </div>   
+                    <div id="menu2" class="tab-pane fade">  
+                      <h3>SQL</h3>  
+                      <p>SQL is just a query language, it is not a database. To perform SQL queries,   
+                      you need to install any database for example Oracle, MySQL, MongoDB, PostGre SQL, SQL Server, DB2 etc.</p>  
+                    </div>    
+                </div>  
+            </div>    
+        </div>
+        <div id="alert" class="container-fluid">
+          <h1>JAVASCRIPT ALERT</h1>
+          <div class="container">
+            <h1> Bootstrap Alerts</h1>
+             Bootstrap Alerts are used to provide an easy way to create predefined alert messages. Alert adds a style to your messages to make it more appealing to the users.
+             
+             There are four classes that are used within div element for alerts.
+             
+             .alert-success
+             .alert-info
+             .alert-warning
+             .alert-danger
+           </div>
+           <div class="container">  
+            <h1>Alerts</h1>  
+            <div class="alert alert-success">  
+              <strong>Success!</strong> This alert box indicates a successful or positive action.  
+            </div>
+            <div class="container">
+                <h1>Closing Alerts</h1>
+                <div class="alert alert-success alert-dismissable">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+                  <strong>Success!</strong> This alert box could indicate a successful or positive action.
+                </div>
+            </div>
+            <div class="container">  
+                <h2>Bootstrap Alert Links</h2>  
+                <div class="alert alert-success">  
+                  <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.  
+                </div>  
+                <div class="alert alert-info">  
+                  <strong>Info!</strong> You should <a href="#" class="alert-link">read this message</a>.  
+                </div>  
+                <script>
+                    $(document).ready(function(){
+                      $(".close").click(function(){
+                        $("#myAlert").alert("close"); //instead of data-dismiss="alert"
+                      });
+                     // $("#myAlert").on('close.bs.alert', function(){
+                    //alert('The alert message is about to be closed.');
+                  //});
+                  $("#myAlert").on('closed.bs.alert', function(){
+                    alert('The alert message is now closed.');
+                  });
+                    });
+                    </script>
+                    <div class="container">
+                        <h2>Close Alerts Via JavaScript</h2>
+                        <div class="alert alert-success alert-dismissible" id="myAlert">
+                          <button type="button" class="close" >&times;</button><!--multiplication sign-->
+                          <strong>Success!</strong> This alert box could indicate a successful or positive action.
+                        </div>
+                      </div>    
+</body>
+</html>

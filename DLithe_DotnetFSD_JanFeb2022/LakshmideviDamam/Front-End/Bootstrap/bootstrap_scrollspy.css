@@ -1,0 +1,8 @@
+body {
+    position: relative; 
+  }
+  #popover {padding-top:50px;height:500px;color: #fff; background-color:teal}
+  #progressbar{padding-top:50px;height:500px;color: #fff; background-color: pink;}
+  #tabs {padding-top:50px;height:500px;color: #fff; background-color: grey;}
+  #Pills {padding-top:50px;height:500px;color: #fff; background-color: lightgoldenrodyellow;}
+  #alerts {padding-top:50px;height:500px;color: #fff; background-color: lightsalmon;}
