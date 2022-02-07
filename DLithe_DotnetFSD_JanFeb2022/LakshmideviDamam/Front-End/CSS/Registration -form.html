@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        body{
+            background-image: url(bg_04.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"><b>TATA CONSULTANCY SERVICES</b></h1>
+    <form action="signin.html">
+        <p>
+<fieldset style="text-align: justify; border:0;">
+    <legend><b>Registration Form</b></legend><br>
+    <label>FirstName:</label><br>
+    <input type="text" name="FirstName" required><br><br>
+    <label>MiddleName:</label><br>
+    <input type="text" name="MiddleName"><br>
+    <p><label>LastName: </label><br>
+    <input type="text" name="LastName" required><br><br>
+    <label>Email:</label><br>
+    <input type="email" name="Email" placeholder="John@gmail.com" required><br>
+    <br><label>password</label><br>
+    <input type="password" name="password" required><br><br>
+    <label>Gender:</label><br><br>
+    <label><input type="radio" name="gender" value="Male">Male</label>
+    <label><input type="radio" name="gender" value="Female">Female</label>
+    <label><input type="radio" name="gender" value="Other">Other</label><br><br>
+    <label>Phone Number (In the format XXX-XXX-XXXX):</label><br>
+    <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+    <label>Date of Birth:</label><br>
+    <input type="date" name="date of birth"><br><br>
+    <label>State:</label>
+    <select>
+        <option>Select</option>
+        <option>Andhra Pradesh</option>
+        <option>TamilNadu</option>
+        <option>Karnataka</option>
+        <option>Maharastra</option>
+        <option>Rajasthan</option>
+    </select><br><br>
+    Country:<select>
+        <option>Select</option>
+        <option>United States</option>
+        <option>France</option>
+        <option>Brazil</option>
+        <option>Japan</option>
+        <option>Europe</option>
+    </select><br><br>
+    Skills:<select>
+        <option>C</option>
+        <option>Java</option>
+        <option>HTML</option>
+        <option>Python</option>
+        <option>CSS</option>
+        <option>Database-oracle</option>
+    </select><br><br>
+    <input type="checkbox">
+    I agree the<a href="https://www.tcs.com/#">Terms and conditions</a><br><br>
+<button>SignUp</button>&nbsp;&nbsp;&nbsp;
+<input type="button" value="Reset" name="reset">
+
+
+
+</fieldset>
+
+    </form>
+    
+</body>
+</html>

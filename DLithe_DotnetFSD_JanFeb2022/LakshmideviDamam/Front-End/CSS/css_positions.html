@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: teal;
+        }
+        div.static{
+            position: static;
+            left: 20px;
+            border: 2px solid green;
+        }
+        div.relative{
+            position:relative;
+            left: 130px;
+            border: 2px solid red;
+        }
+        div.absolute{
+            position: absolute;
+            top: 260px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 2px solid blue;
+        }
+        div.fixed {
+            position: fixed;
+            bottom: 150px;
+            right: 0;
+            width: 300px;
+            border: 3px solid lightslategrey;
+}
+        div.sticky{
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            border: 2px solid pink;
+        }
+        h2{
+            color:yellow;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Position Property</h2>
+    <p><b>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</b></p>
+     <h2>Position:Static</h2>
+     <div class="static">This div is in position:static</div>
+     <hr>
+     <h2>Position:relative</h2>
+     <div class="relative">This div is in position:relative</div>
+     <hr>
+     <h2>Position:Absolute</h2>
+     <div class="absolute">This div is in position:absolute</div>
+     <hr>
+     <h2>Position:Fixed</h2>
+     <div class="fixed"> This div is in position : fixed</div>
+     <hr>
+     <h2>position:Sticky</h2>
+     <div class="sticky">This div is in position:sticky</div> 
+</body>
+</html>

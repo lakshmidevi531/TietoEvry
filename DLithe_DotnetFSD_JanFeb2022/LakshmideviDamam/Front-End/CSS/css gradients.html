@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css gradients</title>
+    <style>
+        h1{
+            color: red;
+        }
+        .one{
+            text-align: center;
+            height: 200px;
+            background: linear-gradient(to right,#CAC531,#ee9ca7,#FFF200,#FF0000,#1E9600);
+        }
+        .two{
+            text-align: center;
+            height: 200px;
+            background: linear-gradient(to left,#CAC531,#ee9ca7,#FFF200,#FF0000,#1E9600);
+        }
+        .three{
+            text-align: center;
+            height: 200px;
+            background: linear-gradient(to top,#CAC531,#ee9ca7,#FFF200,#FF0000,#1E9600);
+        }
+        .four{
+            text-align: center;
+            height: 200px;
+            background: linear-gradient(to bottom,#CAC531,#ee9ca7,#FFF200,#FF0000,#1E9600);
+        }
+        .five{
+            text-align: center;
+            height: 200px;
+            background: repeating-linear-gradient(to right,#CAC531,#ee9ca7,#FFF200,#FF0000,#1E9600);
+        }
+        .A{
+            height: 400px;
+            background: radial-gradient(circle,#CAC531,#ee9ca7,#FFF200,#FF0000,#1E9600);
+        }
+        .B{
+            height: 400px;
+            background: radial-gradient(ellipse,#CAC531,#ee9ca7,#FFF200,#FF0000,#1E9600); 
+        }
+        .C{
+            height: 400px;
+            background-image: repeating-radial-gradient( #CAC531 7% ,#FF0000 10%,#1E9600 ,#6dd5ed );
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Gradients</h1>
+    <div class="one">This is a linear gradient from left to right</div>
+    <br>
+    <div class="two">This is a linear gradient from right to left</div>
+    <br>
+    <div class="three">This is a linear gradient from top to bottom</div>
+    <br>
+    <div class="four">This is a linear gradient from bottom to top</div>
+    <br>
+    <div class="five"> This is a repeated linear gradient</div>
+    <br>
+    <div class="A">This is a circle radical gradient</div>
+    <br>
+    <div class="B">This is a ellipse radical gradient </div>
+    <br>
+    <div class="C"> This is repeating radical gradient</div>
+</body>
+</html>

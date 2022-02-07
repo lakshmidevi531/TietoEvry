@@ -1,0 +1,63 @@
+body{
+    background: linear-gradient(to right,#CAC531,#F3F9A7);
+}
+h1{
+    color: red;
+    text-align: center;
+    font-family: cursive;
+}
+div {
+    background-color: lightblue;
+    width: 300px;
+    height: 50px;
+    padding: 20px;
+    border: 2px dotted black;
+    border-radius: 2px;
+    overflow: visible;
+  }
+  /* overflow was hidden*/
+  div.one {
+    background-color: burlywood;
+    width: 300px;
+    height: 50px;
+    border: 2px dotted black;
+    overflow: hidden;
+  }
+  /* overflow :scroll */
+  div.two {
+    background-color: cyan;
+    width: 300px;
+    height: 50px;
+    border: 2px dotted black;
+    overflow: scroll;
+  }
+  /* overflow :auto */
+  div.three {
+    background-color: lightcoral;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted grey;
+    overflow: auto;
+  }
+  overflow-x: hidden; 
+    overflow-y: scroll; /* y-axis will be scrollable*/
+      div.first {
+        opacity: 0.2;
+        background-color: pink;
+      }
+      
+      div.second {
+        opacity: 0.4;
+        background-color: pink;
+      }
+      
+      div.third {
+        opacity: 0.6;
+        background-color: pink;
+      }
+      img:hover{
+        opacity: 0.5;
+      }
+    h2{
+        color: seagreen;
+    }

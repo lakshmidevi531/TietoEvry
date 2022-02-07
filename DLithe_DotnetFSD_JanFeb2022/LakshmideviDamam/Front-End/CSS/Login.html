@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        /* styling for form*/
+        form{
+            background-color: antiquewhite;
+            color: black;
+            text-align: justify
+        }
+        /*styling for navbar*/
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: -webkit-sticky;
+            position:sticky;
+            top:0;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active) {
+            background-color:crimson;
+        }
+        .active {
+            background-color:turquoise;
+        }
+    </style>
+</head>
+<body>
+    <!--creating a sticky nav bar-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#" style="font-family: cursive; font-size: 30px;">Telecom</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+      <li><a class="active" href="#">HOME</a></li>&nbsp;&nbsp;
+      <li><a href="Registration -form.html">SignUp</a></li>&nbsp;&nbsp;
+      <li><a href="Login.html">Login</a></li>&nbsp;&nbsp;
+      <li><a href="#">Contact</a></li>
+    
+    </ul>
+    </div>
+    </nav>
+    <!--Creating a login form-- -->
+    <form action="Web_design.html">
+        <label>Email:</label><br>
+        <input type="email" name="email" required>
+        <br>
+        <label>Password:</label><br>
+        <input type="password" name="password" required>
+        <br><br>
+        <button type="Login" value="Login">Login</button>&nbsp;&nbsp;
+        <button type="cancel" value="cancel" >Cancel</button>
+    </form>
+</body>
+</html>
