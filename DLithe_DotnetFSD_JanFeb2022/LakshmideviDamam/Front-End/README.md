@@ -2,6 +2,8 @@ Hi Everyone !!
 Iam Lakshmidevi Damam and welcome to my github.This particular folder is public and available for experts to review my code. Any feedback is much appreciated.
 Iam publishing my technical work here on full stack  development using HTML, CSS, Bootstrap, JavaScript, Angular, C# programming, .NET Core & MVC, SQL Server database.
 Below are the instructions to use my folder. The structure will help you for referring and review the code.
+
+------------------------------------------------------------------------------------------------------------------
    TIETOEVRY
      ----
          DLithe_DotnetFSD_JanFeb2022
@@ -44,7 +46,7 @@ Below are the instructions to use my folder. The structure will help you for ref
                             
                             
                             
-                            
+   -----------------------------------------------------------------------------------                         
                             
  Below are my learning during bootcamp
  
