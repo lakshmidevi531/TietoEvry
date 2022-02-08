@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--CSS only-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+    position: relative; 
+  }
+  #jsdatatypes{padding-top: 50px;height: 50px;color: black;}
+    </style>
+</head>
+<body data-spy="scroll" data-target=".Navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top"> <!--Try with <ul class="nav nav-pills nav-stacked">-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+              <a class="navbar-brand" href="#">Javacript</a>
+            </div>
+            <div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li><a href="#jsdatatypes">JavaScript datatypes</a></li>
+                  <li><a href="#jsvariables">JavaScript Variables</a></li>
+                  <li><a href="#jsoutputs">JavaScript Outputs</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        </nav>
+        <div id="jsdatatypes" class="container-fluid">
+         <div class="container" style="background-color: teal;"><br><br> 
+              <p>JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.JavaScript is easy to learn.</p>
+              <h1>JavaScriptDatatypes</h1>
+              <p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+              <p>In programming, data types is an important concept.</p>
+              <p>To be able to operate on variables, it is important to know something about the type.</p>
+              <p>Strings are written with quotes. You can use single or double quotes</p>
+              <p>JavaScript has only one type of numbers.Numbers can be written with, or without decimals</p>
+              <p>Booleans can only have two values: true or false</p>
+        <!--Binding the values by getElementbyId-->
+              <p id="demo"></p>
+              <p id="demo1"></p>
+              <p id="demo2"></p>
+              <p>JavaScript objects are written with curly braces {}. Object properties are written as name:value pairs, separated by commas.</p>
+              <p id="demo3"></p>
+            <script>
+             var a=10;//number
+             var b=12.5;//decimal
+             var c=true;//boolean
+             var str="Hello";//string
+             var x=null;//null
+             var arr=["Hello","java","Python"];//array
+             var z = 
+             {
+                 name:"Lakshmi",age:22,city:"kurnool"
+             };
+            // For printing the values
+            document.write(a+"<br>");
+            document.write(b+"<br>");
+            document.write(c+"<br>");
+            document.write(str+"<br>");
+            document.write(x+"<br>");
+            document.write(arr[0]+"<br>");
+            document.write(z.name+"<br>");
+            let str1 = "DLithe" + "Bootcamp ";
+            var x=15;
+            var y=12;
+            const bootcamp = {
+              frontend : "html",
+              backend  : "sql"
+            };
+            document.getElementById("demo3").innerHTML =bootcamp.frontend + " stands for hyper text markup language";
+            document.getElementById("demo").innerHTML = z; //When adding a number and a string, JavaScript will treat the number as a string.
+            document.getElementById("demo1").innerHTML =(x >y) + "<br>" + (x<y);
+            document.getElementById("demo2").innerHTML = 
+            typeof "hello" + "<br>" + 
+            typeof 314 + "<br>" +
+            typeof 3.14 + "<br>" +
+            typeof (123e8) + "<br>" + //12300000
+            typeof (33 + 24);
+            alert("hlo trainees")   
+            </script>
+          </div>
+        <br><br>
+</body>
+</html>

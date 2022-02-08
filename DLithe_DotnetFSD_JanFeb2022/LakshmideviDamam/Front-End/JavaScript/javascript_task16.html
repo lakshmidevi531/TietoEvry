@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        #myDIV {
+           width: 300px;
+           height: 300px;
+           background: coral;
+           color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript</h2>
+    <hr>
+    <p>JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.JavaScript is easy to learn.</p>
+    <button type="button" onclick="changeBackgroundImage()">Change background image</button>
+        <h3>JavaScriptDatatypes</h3>
+            <p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+            <p>In programming, data types is an important concept.</p>
+            <p>To be able to operate on variables, it is important to know something about the type.</p>
+            <p>Strings are written with quotes. You can use single or double quotes</p>
+            <p>JavaScript has only one type of numbers.Numbers can be written with, or without decimals</p>
+            <p>Booleans can only have two values: true or false</p>
+            <mark>Printing Values by using innerHTML</mark>
+            <p id="demo"></p>
+              <p id="demo1"></p>
+              <p id="demo2"></p>
+              <p>JavaScript objects are written with curly braces {}. Object properties are written as name:value pairs, separated by commas.</p>
+              <p id="demo3"></p>
+              <hr>
+              <h3>Javascript Events</h3>
+              <pre>An HTML event can be something the browser does, or something a user does.
+
+                Here are some examples of HTML events:
+                
+                An HTML web page has finished loading
+                An HTML input field was changed
+                An HTML button was clicked
+                Often, when events happen, you may want to do something.
+                
+                JavaScript lets you execute code when events are detected.
+                
+                HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.</pre>
+                <mark>Below hyper link shows the events</mark><br><br>
+                <a href="js_events.html">JS Events</a>
+                <hr>
+                <mark>Changing Background</mark>
+                <div id="myDIV">
+                 <p>This is a div</p>   
+                </div><br>
+                <b>Click on Try it button to change the background of div element</b>
+                <button onclick="myFunction()">Try it</button>
+                <hr>
+                <h3>Functions</h3>
+                <pre>A JavaScript function is a block of code designed to perform a particular task.JavaScript function is executed when "something" invokes it (calls it)</pre>
+                <br>
+                <p>This example calls a function which performs a calculation and returns the result:</p>
+                <p id="demo6"></p>
+                <br>
+                 
+              <script>
+                  let str1 = "DLithe" + "Bootcamp ";
+                  var x=12;
+                  var y=23;
+                  const bootcamp = {
+                    frontend : "html",
+                    backend  : "sql"
+                    };
+                document.getElementById("demo3").innerHTML =bootcamp.frontend + " stands for hyper text markup language";
+                document.getElementById("demo").innerHTML = str1; //When adding a number and a string, JavaScript will treat the number as a string.
+                document.getElementById("demo1").innerHTML =(x >y) + "<br>" + (x<y);
+                function myFunction() {
+                document.getElementById("myDIV").style.background = "url('Bg_01.jpg') lightblue repeat-x center";
+                  }
+                function myFunction(p1, p2) {
+                   return p1 * p2;
+                }
+                document.getElementById("demo6").innerHTML = myFunction(4, 3);
+                function myFunction() {
+                   alert("Hello World!");
+                } 
+                function changeBackgroundImage() {
+                  document.body.style.backgroundColor = "#f3f3f3";
+                  document.body.style.backgroundImage ="url(Bg_01.jpg)";
+                } 
+              </script>
+</body>
+</html>

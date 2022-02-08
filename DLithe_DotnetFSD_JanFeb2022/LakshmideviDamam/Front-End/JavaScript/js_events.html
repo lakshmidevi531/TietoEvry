@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Events</title>
+    <script type = "text/javascript">
+        function sayHello()
+        {
+           alert("Hello Team!!!!!!!")
+        }
+        function over() 
+        {
+        document.write ("Mouse Over");
+        }
+function changeBackground()
+
+{
+background.style.backgroundColor = 'rgb(230, 120,200)';
+}
+
+function hov() {
+var e = document.getElementById('hover');
+//e.style.display = 'none';
+e.style.height='100px';
+hover.style.backgroundColor='red';
+}
+function highlightInput()
+{
+    var e = document.getElementById('focus');
+            e.style.backgroundColor = 'yellow';
+        }   
+</script>
+</head>
+<body onload="window.alert('Page is loaded successfully!');">
+    <div onmouseover = "over()">
+        <h2> This is inside the division </h2>
+     </div>  
+     <button onclick="this.innerHTML = Date()">The time is?</button>  
+     <br>
+     <br>
+     <button onclick="hi()" >Hello</button>  
+     <br>  
+       <form>
+           <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+           <hr>
+           <input id="background" onkeyup="changeBackground()"
+placeholder="Place your Text!" style="color:white">
+<hr>
+<input type="text" onkeypress="alert('You have pressed a key inside text input!')" placeholder="text input">
+<br>
+<textarea onkeypress="alert('You have pressed a key inside textarea!')" placeholder="textarea"></textarea>
+<br>
+<input id="focus" type="text" onfocus="highlightInput()">
+<br>
+<select onchange="alert('You have changed the selection!');">
+   <option>Select</option>
+   <option>AP</option>
+   <option>KA</option>
+</select>
+</form>
+<hr>
+<hr>
+<div id="hover" onmouseover="hov()"
+style="height:400px;width:400px;text-align: center;text-transform: uppercase;">Welcome to JavaScript!!
+</div><hr>
+</body>
+</html>
