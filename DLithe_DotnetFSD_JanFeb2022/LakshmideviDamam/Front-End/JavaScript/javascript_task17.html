@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body style="background-color: burlywood;">
+    <h1 style="text-align: center;">JavaScript</h1><br>
+    <!--javascript arrays in grid layout -->
+    <div container>
+        <div class="row">
+         <div class="col-sm-6" style="background-color: darkgrey;color: white;">
+    <h2>JavaScript Arrays</h2>
+    <p id="demo"></p>
+    <h2>JavaScript Array Methods</h2> 
+    <h2>push()</h2>
+    <p>The push() method returns the new array length:</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <h2>pop()</h2>
+    <p>The pop() method removes the last element from an array.</p>
+    <p id="demo3"></p>
+    <h2>unshift()</h2>
+    <p>The unshift() method adds new elements to the beginning of an array:</p>
+    <p id="demo5"></p>
+    <h2>shift()</h2>
+    <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+    <p id="demo6"></p>
+    </div>
+    <!--javscript date functions in grid-->
+     <div class="col-sm-6">
+         <h2>JavaScript Date Functions</h2>
+         <pre>There are 4 ways :
+            new Date()
+            new Date(year, month, day, hours, minutes, seconds, milliseconds)
+            new Date(milliseconds)
+            new Date(date string)
+         </pre>
+         <h2>JavaScript new Date()</h2>
+         <p>Using new Date(), creates a new date object with the current date and time:</p>
+         <p id="demo7"></p>
+         <h2>JavaScript new Date()</h2>
+         <p>Using new Date(7 numbers), creates a new date object with the specified date and time:</p>
+         <p id="demo8"></p>
+         <h2>JavaScript new Date()</h2>
+         <p>Using new Date(milliseconds), creates a new date object as January 1, 1970, 00:00:00 Universal Time (UTC) plus the milliseconds:</p>
+         <p id="demo9"></p>
+         <h2>JavaScript new Date()</h2>
+         <p>A Date object can be created with a specified date and time:</p>
+         <p id="demo10"></p>
+     </div>
+    </div>
+    </div>
+    <hr>
+    <!---javascript math functions-->
+    <div class="container-fluid">
+                <h2>JavaScript math Functions</h2>
+                <p>The JavaScript Math object allows you to perform mathematical tasks on numbers.</p>
+                <p>Math Properties (Constants)<br>
+                    The syntax for any Math property is : Math.property.<br>
+                    JavaScript provides 8 mathematical constants that can be accessed as Math properties:</p>
+                    <h2>JavaScript Math Constants</h2>
+                    <p id="demo11"></p>
+                    <p>Math.round(x) returns the value of x rounded to its nearest integer:</p>
+                    <p>Math.ceil() rounds a number <strong>up</strong> to its nearest integer:</p>
+                    <p>Math.floor(x) returns the value of x rounded <strong>down</strong> to its nearest integer:</p>
+                    <p>Math.trunc(x) returns the integer part of x:</p>
+                    <p>Math.sign(x) returns if x is negative, null or positive:</p>
+                    <p>Math.pow(x,y) returns the value of x to the power of y:</p>
+    </div>
+    <script>
+        // Arrays and Array methods
+       const cars = ["Saab", "Volvo", "BMW"];
+       document.getElementById("demo").innerHTML = cars;
+       const fruits = ["Banana", "Orange", "Apple", "Mango"];
+       document.getElementById("demo1").innerHTML = fruits.push("Kiwi");
+       document.getElementById("demo2").innerHTML = fruits;
+       var c=fruits.pop();
+       document.getElementById("demo3").innerHTML=c;
+       fruits.unshift("Watermelon");
+       fruits.unshift("Guava");
+       document.getElementById("demo5").innerHTML=fruits;
+       fruits.shift();
+       document.getElementById("demo6").innerHTML=fruits;
+       //date functions
+       const da = new Date();
+       document.getElementById("demo7").innerHTML = da;
+       const date = new Date(2018, 11, 24, 10, 33, 30, 0);
+       document.getElementById("demo8").innerHTML = date;
+       const g = new Date(0);
+       document.getElementById("demo9").innerHTML = g;
+       const d = new Date("October 13, 2014 11:13:00");
+       document.getElementById("demo10").innerHTML = d;
+       //Math functions
+       document.getElementById("demo11").innerHTML = 
+       "<p><b>Math.E:</b> " + Math.E + "</p>" +
+       "<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+       "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+       "<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+       "<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+       "<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+       "<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+       "<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+       document.write("<br>"+ Math.round(4.5)+"<br>");
+       document.write("<br>"+Math.ceil(2.3)+"<br>");
+       document.write("<br>"+Math.ceil(4.2)+"<br>");
+       document.write("<br>"+Math.floor(4.7)+"<br>");
+       document.write("<br>"+Math.trunc(4.7)+"<br>");
+       document.write("<br>"+Math.sign(0)+"<br>");
+       document.write("<br>"+Math.sign(-4.7)+"<br>");
+       document.write("<br>"+Math.pow(4,2)+"<br>");
+       document.write("<br>"+Math.sqrt(121)+"<br>");
+       document.write("<br>"+Math.abs(-1)+"<br>");
+       document.write("<br>"+Math.sin(1)+"<br>");
+       document.write("<br>"+Math.cos(1)+"<br>");
+       document.write("<br>"+Math.tan(1)+"<br>");
+       document.write("<br>"+Math.min(0, 150, 30, 20, -8, -200)+"<br>");
+       document.write("<br>"+Math.max(0, 150, 30, 20, -8, -200)+"<br>");
+       document.write("<br>"+Math.random()+"<br>");   
+       document.write("<br>"+Math.log(1)+"<br>");
+    </script> 
+   
+</body>
+</html>

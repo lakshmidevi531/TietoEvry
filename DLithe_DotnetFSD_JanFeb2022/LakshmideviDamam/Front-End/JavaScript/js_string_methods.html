@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body style="background-color: aquamarine;">
+    <h2> JavaScript String methods</h2>
+    <p>Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+    <p>The length property returns the length of a string:</p>
+    <p id="demo"></p>  
+    <p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo").innerHTML=text.length;
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById("demo1").innerHTML = str.substring(7,13);
+        var s1="javascript ";  
+        var s2="concat example";  
+        var s3=s1.concat(s2);  
+        document.getElementById("demo2").innerHTML=s3; 
+    </script>
+    <br>
+    <script>  
+        var s1="javascript indexof example";  
+        var n=s1.indexOf("indexof");  
+        document.write(n);  
+    </script> <br>
+    <script>  
+        var s1="indexof javascript indexof";  
+        var n=s1.lastIndexOf("indexof");  
+        document.write(n);  
+        </script>  <br>
+     <script>  
+        var s1="JavaScript toUpperCase Example";  
+        var s2=s1.toUpperCase();  
+        document.write(s2);  
+    </script><br>
+    <script>  
+        var s1="JavaScript toLowerCase Example";  
+        var s2=s1.toLowerCase();  
+        document.write(s2);  
+    </script><br>
+    <script>  
+        var s1="abcdefgh";  
+        var s2=s1.slice(2,5);  
+        document.write(s2);  
+    </script><br>
+    <script>  
+        //The JavaScript String trim() method removes leading and trailing whitespaces from the string.
+                   var s1="     javascript trim    ";  
+                   var s2=s1.trim();  
+                   document.write(s2);  
+    </script>
+    <hr>
+    <h2>Exception handling</h2>
+    <pre>
+        Throw, and Try...Catch...Finally
+        The try statement defines a code block to run (to try).
+        The catch statement defines a code block to handle any error.
+        The finally statement defines a code block to run regardless of the result.
+        The throw statement defines a custom error.
+    </pre>
+    <p>How to use <b>catch</b> to display an error.</p>
+    <script>
+        try {
+          alert("Welcome guest!");
+        }
+        catch(err) {
+          document.write(err.message);
+        }
+    </script>        
+</body>
+</html>
