@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h2>JavaScript Inheritance</h2>
+    <p id="demo"></p>
+
+    <script>
+       class Car {
+       constructor(brand) {
+       this.carname = brand;
+       }
+       }
+       Car.prototype.present=function() {
+       return 'I have a ' + this.carname;
+       }
+      
+
+       class Model extends Car {
+       constructor(brand, mod) {
+       super(brand);
+       this.model = mod;
+       }
+       }
+       Model.prototype.show=function() {
+       return this.present() + ', it is a ' + this.model;
+       }
+      
+      let myCar = new Model("Ford", "Mustang");
+      document.getElementById("demo").innerHTML = myCar.show();
+    </script>
+    <h2>JavaScript Polymorphism</h2>
+    <script>
+        class Welcome
+          {
+             show()
+            {
+              document.writeln("Welcome class method.");
+            }
+          }
+        class Bye extends Welcome
+          {
+           show()
+            {
+              document.writeln("Bye class method.");
+            }
+          }
+        var welcome=new Welcome();
+        welcome.show();
+         
+        var bye=new Bye();
+        bye.show();
+        alert(bye instanceof Bye);
+        alert(bye instanceof Welcome);
+        </script>
+        <hr>
+
+</body>
+</html>
