@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h2>JavaScript prototype</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        function Employee()
+        {
+            this.fname='Lakshmi';
+            this.lname='Damam';
+            this.designation='Developer';
+            this.mobile=9658021345;
+        }
+        var emp1= new Employee();
+        document.write(emp1.fname+"<br>");
+        document.write(emp1.lname+"<br>");
+        document.write(emp1.designation+"<br>");
+        var empObj1= new Employee();
+        empObj1.location = 'kurnool';
+	    document.write(empObj1.location+"<br>");
+    	function showMessage() {
+         alert( 'Hello everyone!' );
+          }
+          showMessage();
+        function sayhi(){
+            document.write("Hi");
+        } 
+        sayhi(); 
+           var obj=new Employee();
+           document.getElementById("demo").innerHTML="Employees first name is " +obj.fname+ " and the last name is " +obj.lname+ " who is working as " +obj.designation+" in "+empObj1.location+" you can contact to "+obj.mobile;
+    </script>
+    <script>
+        function Employee1(fname,lname,designation,mobile)
+        {
+            this.fname='Priya';
+            this.lname='Jenne';
+            this.designation='Tester';
+            this.mobile=9492844173;
+        }
+        Employee1.prototype.location="banglore";
+        Employee1.prototype.name=function(){
+            return this.fname+""+this.lname+""+this.designation+""+this.mobile;
+        }
+        const n= new Employee1();
+        document.getElementById("demo2").innerHTML=n.name()+""+n.location;
+    </script>
+</body>
+</html>
