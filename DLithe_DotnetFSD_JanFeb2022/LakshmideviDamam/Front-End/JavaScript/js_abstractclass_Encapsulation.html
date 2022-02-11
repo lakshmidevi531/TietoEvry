@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body style="background-color: grey;">
+    <h2 style="background-color: black; color:white;text-align: center;">JavaScript</h2>
+    <br><br>
+    <div class="container">
+     <div class="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <div class="col-sm-5" style="background-color: darksalmon;">
+    <h3>JavaScript Abstract class</h3>
+    <pre>
+        Abstract classes can be defined as classes that cannot be instantiated i.e. whose object reference cannot be created and contains within it, one or more abstract methods. 
+        An abstract method is a method that can only be declared but has no implementation to it.
+    </pre>
+    <br>
+    <script>
+        function Animal()
+        {
+            this.animalName="animalName";
+            throw new Error("You cannot create an instance of Abstract Class");
+        }
+        Animal.prototype.display=function()
+        {
+        return "Animal Name is: "+this.animalName;
+        }
+        function Dog(animalName)
+        {
+        this.animalName=animalName;
+        }
+        Dog.prototype=Object.create(Animal.prototype);
+
+        var dog=new Dog(" Siberian Husky");
+        document.writeln(dog.display());
+    </script>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="col-sm-5" style="background-color: darksalmon;">
+    <h3>JavaScript Encapsulation</h3>
+    <pre>
+        The JavaScript Encapsulation is a process of binding the data (i.e. variables) with the functions acting on that data. It allows us to control the data and validate it. To achieve an encapsulation in JavaScript
+        Use var keyword to make data members private.
+            Use setter methods to set the data and getter methods to get that data.
+            The encapsulation allows us to handle an object using the following properties:
+        Read/Write - Here, we use setter methods to write the data and getter methods read that data.
+        Read Only - In this case, we use getter methods only.
+    </pre>
+    <script>
+        function Student(name,marks)  
+        {  
+          var s_name=name;  
+          var s_marks=marks;  
+          Object.defineProperty(this,"name",{  
+          get:function()  
+          {  
+            return s_name;  
+          },  
+          set:function(s_name)  
+          {  
+          this.s_name=s_name;  
+          }      
+        });  
+   
+        Object.defineProperty(this,"marks",{  
+        get:function()  
+        {  
+          return s_marks;  
+        },  
+        set:function(s_marks)  
+        {  
+        this.s_marks=s_marks;  
+        }      
+        });  
+        }  
+        var stud=new Student("Lucky",80);  
+        document.writeln(stud.name+" "+stud.marks);  
+    </script>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <div class="container-fluid" style="background-color: aquamarine;width: 400px;height: 250px;">
+        <h3>JavaScript Method Overriding and Overloading</h3>
+        <pre>
+            Method Overriding is an OOPs concept closely knit with inheritance. When a child class method overrides the parent class method of the same name, parameters and return type, it is termed as method overriding. Also, be reminded that this is completely different from the concept of method overloading. Method overloading occurs when there are two functions with the same name but different parameters.
+        </pre>
+        <script>
+            //Calculate area of rectangle
+            function calculateArea(x, y){
+              return x*y;
+            }
+            //Calculate area of square
+            function calculateArea(a){
+              return a*a;
+            }
+            document.write("Area of rectangle 2x3 is : " + calculateArea(2, 3)+"<br>");
+            document.write("Area of square 5x5 is : " + calculateArea(5));
+        </script><br>
+        <script>
+             function multiplyNum(p,q){
+                 return p*q;
+             }
+             function multiplyNum(p,q,r){
+                 return p*q*r;
+             }  
+            var res=multiplyNum(1,2,3);
+            document.write(res+" "+"[Output for method overriding]");
+        </script>
+    </div>
+</body>
+</html>
