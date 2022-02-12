@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Inheritance</title>
+</head>
+<body>
+    <script>
+        function A(a){
+            this.a=4;
+        }
+        function B(a,b){
+          this.a=3;
+          this.b=5;
+        }
+        B.prototype = Object.create(A.prototype);
+		B.prototype.constructor = B;
+        document.write(a,b);
+    </script>
+</body>
+</html>
