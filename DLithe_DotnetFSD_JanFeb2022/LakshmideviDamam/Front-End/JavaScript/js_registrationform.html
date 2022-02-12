@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        body{
+            background-image: url(js_registration\ form.png);
+            background-size: cover;
+            color: whitesmoke;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h2>Register</h2>
+    <form name="f1" action="" onsubmit="return matchpass()">
+        <fieldset style="text-align:justify; margin-left: 200px;width: 500px;">
+           <label><b>First Name :</b></label><br>
+           <input type="text" name="first name" value="" required><br>
+           <label><b>Last Name :</b></label><br>
+           <input type="text" name="last name" value=""><br>
+           <label><b>Email :</b></label><br>
+           <input type="email" name="email" placeholder="xyz@gmail.com" required><br>
+           <label><b>Create Password :</b></label><br>
+           <input type="password" name="password1" required>
+           <br>
+           <label><b>Confirm Password</b></label><br>
+           <input type="password" name="password2"><br>
+           <script>
+               
+               if(password1.value==password2.value){
+                   return true;
+               }
+               else{
+                   alert('password mismatch');
+               }
+           </script>
+           <label><b>Mobile :</b></label><br>
+           <input type="number" name="mobile" maxlength="10" required><br><br>
+           <input type="button" name="submit" value="Submit">&nbsp;&nbsp;
+           <input type="button" name="reset" value="Reset">
+           </fieldset>
+    </form>
+    <script type="text/javascript">
+        function matchpass()
+        {
+        var firstpassword =document.f1.password1.value;
+        var secondpassword=document.f1.password2.value;
+        
+        if(firstpassword==secondpassword)
+        {
+        return true;
+        }
+        else
+        {
+        alert("password must be same!");
+        return false;
+        }
+        }
+        </script>
+</body>
+</html>
