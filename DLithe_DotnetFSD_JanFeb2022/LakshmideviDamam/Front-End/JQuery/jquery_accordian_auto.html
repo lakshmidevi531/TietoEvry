@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-Accordian-Autocomplete</title> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
+    <link rel="stylesheet" href="/resources/demos/style.css">  
+    <!---Styling for body and div element-->
+    <style>
+    body{
+        background-color: darkgoldenrod;
+    }  
+    div{
+       background-color: aquamarine;
+    }
+    </style>
+</head>  
+<body>
+    <h2>JQuery UI-Accordian</h2>
+    <!---Jquery UI Accordian-->  
+<div id="accordion" style="color: blue;">  
+  <h3>What is Java?</h3>  
+  <div>  
+    <p>  
+   Java is a simple, object oriented, concurrent and general purpose programming language.   
+  Some other important features of java are robust, secure, portable, interactive and high performance.   
+  Java was developed by Sun Microsystems in 1995 since then it has become very popular due to its feature  
+   like platform independent and robust in the case of memory management.  
+    </p>    
+  </div>  
+  <h3>Why is it called platform?</h3>  
+  <div>  
+    <p>  
+   Because java has its own run time environment (JRE) and API so it is called platform.  
+    </p>  
+  </div>  
+  <h3>Where is it used?</h3>  
+  <div>  
+    <p>  
+    According to Sun Microsystems, nearly 3 billion devices run java. Some of these devices   
+   are mobile phones, games, robotics, application in banking sector etc.  
+    </p>  
+  </div> 
+  <hr>
+  <!--JQuery Autocomplete-->
+  <h2>JQuery Autocomplete</h2>
+  <script>  
+    $(function() {  
+      var technologies = [  
+        "ActionScript",  
+        "AppleScript",  
+        "Asp",  
+        "BASIC",  
+        "C",  
+        "C++",  
+        "Clojure",  
+        "COBOL",  
+        "CSS",  
+        "Fortran",    
+        "Java",  
+        "JavaScript",  
+        "Lisp",  
+        "Perl",  
+        "PHP",  
+        "Python",  
+        "Ruby",  
+        "Scala",  
+        "HTML"  
+      ];  
+      $( "#tech" ).autocomplete({  
+        source: technologies  
+      });  
+    });  
+    </script>  
+    <div class="ui-widget">  
+        <p>Enter Your Skills:</p>  
+         <label for="tech">Technologies: </label>  
+         <input id="tech">  
+       </div>  
+</body>  
+</html>

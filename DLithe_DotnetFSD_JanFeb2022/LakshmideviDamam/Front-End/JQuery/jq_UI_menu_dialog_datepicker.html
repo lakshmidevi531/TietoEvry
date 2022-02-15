@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery UI</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
+    <link rel="stylesheet" href="/resources/demos/style.css">  
+    <!---JQuery Accordian-->
+    <script>  
+        $(function() {  
+         $( "#accordion" ).accordion();  
+        });  
+       </script> 
+       <!---JQuery DatePicker-->
+       <script>
+           $(function() {
+              $( "#datepicker-1" ).datepicker({
+                 changeMonth:true,
+                 changeYear:true,
+                 numberOfMonths:[3,3]
+              });
+           });
+        </script>
+        <!---JQuery UI Dialog-->
+        <script>
+           $(function() {
+              $( "#dialog" ).dialog({
+                 autoOpen: false,  
+              });
+              $( "#opener" ).click(function() {
+                 $( "#dialog" ).dialog( "open" );
+              });
+           });
+        </script>
+        <!---Syling for JQuery UI Menu-->
+            <style>
+                .ui-menu {
+                    width: 200px;
+                }
+                #my_cs_menu{
+                    background-color: black;
+                }
+            </style>
+        
+</head>
+<body style="background-color:darkslategray">
+    <h2 style="text-align: center;color: bisque;">JQuery UI</h2>
+    <!---JQuery Acoordian-->
+    <div id="accordion" style="background-color:orange">
+    <h3>Date Picker</h3>
+    <!--JQuery UI Date Picker-->
+  <div>
+      <p>A date-picker of jQuery UI is used to provide a calendar to the user to select the date from a Calendar. This date picker usually connected to a text-box so user selection of date from the calendar can be transferred to the textbox.</p>
+      <p>Enter  your Date of Birth: <input type = "text" id = "datepicker-1"></p>
+  </div>
+  <h3>JQuery Dialog</h3>
+  <!---JQuery UI Dialog-->
+  <div>
+      <p>The Dialog box is the way to inform the user about something. It is a nice way to popup on the user window to show the information that will happen in the next or any kind of information developer wants to clarify to the user should know. jQueryUI dialog method is used to create a basic dialog window inside the page. It has a title bar and a content area and can be moved, resized and closed with the ‘X’ icon by default.
+
+    </p>
+    <div id = "dialog" 
+         title = "Hello Team...">Welcome to JQuery UI</div>
+      <button id = "opener">Open Dialog</button>
+  </div>
+  <h3>JQueryUI Menu</h3> 
+  <!---JQuery UI Menu--> 
+  <div><p>Menu widget in jQuery UI creates a menu that contains items and sub-items in a sub-menu related to a particular item on the menu. Menu items are created using mark-up elements using a parent-child like relation which can be created using lists and nested lists. Each menu item generally corresponds to a specific page and hence each of these elements is between an anchored tag.
+       </p>
+  </div>
+  <ul id='my_cs_menu'>
+    <li>
+        <div>Networking</div>
+    </li>
+    <li>
+        <div>Office Mgmt</div>
+        <ul>
+            <li>
+                <div>Word</div>
+            </li>
+            <li>
+                <div>Excel</div>
+            </li>
+            <li>
+                <div>Power Point</div>
+            </li>
+            <li>
+                <div>Access</div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <div>Programming</div>
+
+        <ul>
+            <li>
+                <div>Backend</div>
+                <ul>
+                    <li>
+                        <div>PHP</div>
+                    </li>
+                    <li>
+                        <div>Python</div>
+                    </li>
+                    <li>
+                        <div>JSP</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Frontend</div>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <div>Games</div>
+    </li>
+</ul>
+
+<script>
+    $(document).ready(function() {
+        $("#my_cs_menu").menu({
+            menus: 'ul'
+        });
+    })
+</script>        
+  </div>
+</body>
+</html>

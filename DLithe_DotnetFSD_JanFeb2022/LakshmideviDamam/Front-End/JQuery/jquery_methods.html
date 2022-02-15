@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .important {
+           font-weight: bold;
+           font-size: xx-large;
+        }
+        .blue {
+           color:blue;
+        }
+        .red{
+            color:red;
+        }
+    </style>
+</head>
+<body style="background-color:teal ;color:yellow; margin-left:100px;">
+   <h1 style="text-align:center;">JQuery Methods </h1>
+   <hr>
+  <!--JQuery get()-->
+    <h2>Get()</h2>
+    <!--javascript-->
+    <script>
+        $(document).ready(function(){
+          $("#btn1").click(function(){
+            alert("Text: " + $("#test").text());
+          });
+          $("#btn2").click(function(){
+            alert("HTML: " + $("#test").html());  
+          });
+          $("#btn").click(function(){
+            alert($("#flipk").attr("href"));
+          }); 
+        });
+    </script>
+    <p id="test">This is some <mark>marked</mark> text in a paragraph.</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <p><a href="https://www.flipkart.com/" id="flipk">www.flipkart.com</a></p>
+    <button id="btn">Show href Value</button>
+    <br>
+    <!--JQuery set()-->
+    <h2>Set()</h2>
+    <!---javascript-->
+    <script>
+        $(document).ready(function(){
+          $("#btn3").click(function(){
+            $("#test1").text("Hello Team!!");
+          });
+          $("#btn4").click(function(){
+            $("#test2").html("<i>Welcome to JQuery</i>");
+          });
+          $("#btn5").click(function(){
+            $("#test3").val("Siberian Husky");
+          });
+        });
+    </script>
+    <p id="test1">This is a paragraph.</p>
+    <p id="test2">This is another paragraph.</p>
+    
+    <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+    
+    <button id="btn3">Set Text</button>
+    <button id="btn4">Set HTML</button>
+    <button id="btn5">Set Value</button>
+    <script>
+        $(document).ready(function(){
+          $("#b1").click(function(){
+            $("#t1").text(function(i, origText){
+              return "Old text: " + origText + " New text: Hello Team! (index: " + i + ")"; 
+            });
+          });
+        
+          $("#b2").click(function(){
+            $("#t2").html(function(i, origText){
+              return "Old html: " + origText + " New html: Hello <i>Team!!</i> (index: " + i + ")"; 
+            });
+          });
+        });
+    </script>
+    <p id="t1">This is a <b>bold</b> paragraph.</p>
+    <p id="t2">This is  <i>italic</i> paragraph.</p>
+    <button id="b1">Show Old/New Text</button>
+    <button id="b2">Show Old/New HTML</button>
+    <script>
+        $(document).ready(function(){
+          $("b3").click(function(){
+            $("#google").attr({
+              "href" : "https://www.google.co.in",
+              "title" : "google.com"
+            });
+          $("#b3").click(function(){
+            $("#amazon").attr("href", function(i, origValue){
+             return origValue + "/electronics/";
+           });   
+          });
+        });
+    </script>
+    <p><a href="https://www.amazon.in/" title="Amazon Website" id="amazon">Amazon.com</a></p>
+
+    <button id="b3">Change href and title</button>
+    <hr>
+    <!----JQuery append()-->
+    <h2>Append()</h2>
+    <!--javascript-->
+    <script>
+     $(document).ready(function(){
+     $("#b4").click(function(){
+     $("h3").append(" Technologies");
+      });
+
+       $("#b5").click(function(){
+       $("ol").append("<li>JQuery</li>");
+       });
+       });
+    </script>
+    <h3>Front End</h3>
+    <ol>
+       <li>HTML</li>
+       <li>CSS</li>
+       <li>JavaScript</li>
+    </ol>
+    <button id="b4">Append text</button>
+    <button id="b5">Append list items</button>
+    <!--JQuery Prepend()-->
+    <h2>Prepend()</h2>
+    <!--javascript-->
+      <script>
+        $(document).ready(function(){
+        $("#b6").click(function(){
+        $("h4").prepend(" Front End");
+        });
+
+        $("#b7").click(function(){
+        $("ol").prepend("<li>Bootstrap</li>");
+        });
+        });
+      </script>
+      <h4>Technologies</h4>
+      <ol>
+       <li>HTML</li>
+       <li>CSS</li>
+       <li>JavaScript</li>
+       <li>Bootstrap</li>
+      </ol>
+     <button id="b6">Prepend text</button>
+     <button id="b7">Prepend list items</button>
+     <hr>
+     <!--JQuery insert before() and after()-->
+     <h2>insert before() and after()</h2>
+    <!--JavaScript-->
+     <script>
+        $(document).ready(function(){
+        $("#b8").click(function(){
+        $("#one").before("<b>Before</b>");
+        });
+        $("#b9").click(function(){
+        $("#one").after("<i>After</i>");
+        });
+       });
+     </script>
+     <div id="one" style="width:100px;height:100px;background-color:palevioletred"></div>
+     <br><br>
+     <button id="b8">Insert before</button>
+     <button id="b9">Insert after</button>
+     <hr>
+     <!--JQuery remove() and empty()-->
+     <h2>Remove() and empty()</h2>
+     <!--javascript-->
+    <script>
+       $(document).ready(function(){
+        $("#a").click(function(){
+        $("#div1").remove();
+        });
+       });
+    </script>
+    <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:blue;">
+
+     This is some text in the div.
+     <p>HTML-Hyper Text Markup Language.</p>
+     <p>CSS-Cascading Style Sheets.</p>
+    </div>
+    <br>
+    <button id="a">Remove div element</button><br><br>
+    <script>
+       $(document).ready(function(){
+       $("#b").click(function(){
+       $("#div2").empty();
+       });
+      });
+    </script>
+    <div id="div2" style="height:100px;width:300px;border:1px solid black;background-color:blue;">
+    This is some text in the div.
+    <p>HTML-Hyper Text Markup Language.</p>
+    <p>CSS-Cascading Style Sheets.</p>
+    </div>
+    <br>
+    <button id="b">Empty the div element</button>
+    <hr>
+    <!--JQuery Manipulating CSS-->
+    <!--javascript-->
+    <script>
+       $(document).ready(function(){
+       $("#c").click(function(){
+       $("#div3").addClass("important blue"); 
+       });
+      });
+    </script>
+    <!--jquery addClass()-->
+    <div id="div3">JQuery</div>
+    <br>
+    <button id="c">Add classes to first div element</button>
+    <br>
+    <!--javascript-->
+    <script>
+      $(document).ready(function(){
+       $("#d").click(function(){
+       $("#div4").toggleClass("red");
+       });
+       });
+    </script>
+    <!---jquery toggleClass()-->
+    <div id="div4">JavaScript</div>
+    <button id="d">click to toggle</button>
+</body>
+</html>
